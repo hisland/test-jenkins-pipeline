@@ -15,10 +15,6 @@ pipeline {
           echo "god 4"
           '''
       }
-      steps{
-          sh 'echo "step 2"'
-
-      }
     }
     stage('state 2'){
       steps{
