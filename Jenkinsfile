@@ -21,5 +21,10 @@ pipeline {
           sh 'echo "step 2"'
       }
     }
+    stage('archive'){
+      steps{
+          archiveArtifacts artifacts: 'dist/**', onlyIfSuccessful: true
+      }
+    }
   }
 }
