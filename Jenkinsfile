@@ -23,7 +23,7 @@ pipeline {
     }
     stage('archive'){
       steps{
-          archiveArtifacts artifacts: 'dist/**', onlyIfSuccessful: true
+          archiveArtifacts artifacts: 'dist/**', onlyIfSuccessful: true,fingerprint:false
       }
     }
   }
